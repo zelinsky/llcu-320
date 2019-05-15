@@ -2,4 +2,4 @@
 
 ### About
 
-### [Play my game!](project.html)
+### [Play my game!](/project.html)
