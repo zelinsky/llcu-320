@@ -2,4 +2,4 @@
 
 ### About
 
-### [Play my game!](zelinsky.github.io/llcu320/project.html)
+### [Play my game!](project.html)
