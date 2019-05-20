@@ -23,6 +23,8 @@
 
 
 
+
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
 
 
@@ -40,7 +42,9 @@
 
 
 
-</script><tw-passagedata pid="1" name="start" tags="" position="653,146" size="100,100">(set: $train to 0)(set: $x to $x + 1)I sit on a bench and feel the early morning breeze that always seems too cool for a summer day. Church bells are ringing in the distance, and birds chirp overhead. I look up at the clock and see it is nine o&#39;clock. Suddenly, I hear the loud blast of a horn and the screech of wheels on metal. My train has arrived at the station. 
+
+
+</script><tw-passagedata pid="1" name="start" tags="" position="653,146" size="100,100">(set: $train to 0)(set: $x to $x + 1)I sit on a bench and feel the early morning breeze that always seems too cool for a summer day. Church bells are ringing in the distance, and birds chirp overhead. I look up at the clock and see that it is nine. Suddenly, I hear the loud blast of a horn and the screech of wheels on metal. My train has arrived at the station. 
 
 These past few days have been miserable. I have been feeling rather ill and depressed, and I have not been getting much sleep. My doctor prescribed me some medicine, but I do not think it is working. I need to get out of the city for a while. I need to clear my head.
 
@@ -54,7 +58,7 @@ I arrive at the quaint village of Orne in the countryside. This is where I grew 
 I remember its yellow exterior, now covered in rosy vines. A dilapidated bicycle sits by a tree that is much larger than it was when I was last here. I used to ride that bicycle up and down the town streets, passing bakeries smelling of freshly baked bread and homes filled with people laughing and singing.  I walk inside my old home to see faded paint that somehow still retains the same calm, pastel shades. Dust covers the furniture, but I still want to lay down on the red velvet sofa in the living room.
 
 (if: $w+$y+$z is 3)[(text-style:&quot;bold&quot;)+(text-style:&quot;italic&quot;)[I could stay here forever.]]
-(else:)[(event: when time &gt; 45s)[(go-to: &quot;awake&quot;)]]</tw-passagedata><tw-passagedata pid="3" name="head home" tags="" position="819,237" size="100,100">(if: !$train)[Something stops me from getting on the train. I just cannot bring myself to do it, even though I want to get out this city so desperatley.
+(else:)[(event: when time &gt; 40s)[(go-to: &quot;awake&quot;)]]</tw-passagedata><tw-passagedata pid="3" name="head home" tags="" position="819,237" size="100,100">(if: !$train)[Something stops me from getting on the train. I just cannot bring myself to do it, even though I want to get out this city so desperatley.
 ]
 I head back to my home. I walk through the masses of people that refuse to make eye contact with me. I smell cigars and filth as I head down the side street leading to my old house in the center of town. As I pass an old man sitting on the cobblestone walkway, I cannot help but notice the newspaper he is holding boldly marks that there is a killer on the lose.
 
@@ -82,14 +86,17 @@ Why did I decide to confront that man? That&#39;s not like me at all. What came 
 (set: $z to 0)
 (go-to: &quot;start&quot;)</tw-passagedata><tw-passagedata pid="8" name="break the window" tags="" position="818,588" size="100,100">I grab a heavy metal bar that is laying by a dumpster and throw it as hard as I can at the window. The glass shatters with a loud crash as shards fly everywhere. I prop myself up on a nearby cinderblock and hoist myself through the broken window.
 
-As I fall inside, I feel a sharp pain in my neck. (text-style:&quot;italic&quot;)[I have cut myself!] I try to stand but I am losing too much blood. I struggle to breathe as I hobble to the front door. Even though I am trying as hard as I can to reach the door and shout for, I know that I am not going to make it...
+As I fall inside, I feel a sharp pain in my neck. (text-style:&quot;italic&quot;)[I have cut myself!] I try to stand but I am losing too much blood. I struggle to breathe as I hobble to the front door. Even though I am trying as hard as I can to reach the door and shout for help, I know that I am not going to make it...
 (set: $y to 1)
 (display: &quot;end&quot;)</tw-passagedata><tw-passagedata pid="9" name="search the alleyway" tags="" position="968,588" size="100,100">I walk back down the alleyway. Soon, I see a glimmer of gold and stoop down to pick it up. Ah, my key! Before my hand can reach it, I hear a shuffle behind me.
 
 There is a searing pain in my back. I feel warm blood begin to soak my shirt. (text-style:&quot;italic&quot;)[I have been stabbed!] I try to turn around to see who has hurt me, but I am unable to. I am losing blood too fast. I attempt to stand, but instead feel a rush of air as the world goes black...
 (set: $z to 1)
-(display: &quot;end&quot;)</tw-passagedata><tw-passagedata pid="10" name="end" tags="" position="650,592" size="100,100">(if: $x &gt; 1)[I hear a voice:
-(text-style: &quot;shudder&quot;)+(text-style: &quot;bold&quot;)+(text-style: &quot;italic&quot;)[Did you think that you could escape from me?]]
+(display: &quot;end&quot;)</tw-passagedata><tw-passagedata pid="10" name="end" tags="" position="650,592" size="100,100">(if: $w+$y+$z &gt; 2)[I hear a voice:
+(text-style: &quot;shudder&quot;)+(text-style: &quot;bold&quot;)+(text-style: &quot;italic&quot;)[Did you really think it would be different this time?]]
+(else-if: $w+$y+$z &gt; 1)[I hear a voice:
+(text-style: &quot;shudder&quot;)+(text-style: &quot;bold&quot;)+(text-style: &quot;italic&quot;)[Did you think that you could escape from me?]
+]
 (hover-style:(text-style:&#39;italic&#39;))[[Start Over?-&gt;start]]</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
