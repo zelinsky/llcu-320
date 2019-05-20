@@ -1,5 +1,3 @@
-## Welcome to My Project Description Page
-
-### About
+## Welcome to My Project
 
 ### [Play my game!](/project.html)
